@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/current_table_name"
+            style="@style/largeTile2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="Table: default" />
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="horizontal">-->
+
+        <!--          -->
+
+        <!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:id="@+id/query_clear"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_width="24dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_height="24dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_gravity="center_vertical"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:background="?selectableItemBackgroundBorderless"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:padding="12dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:scaleType="fitCenter"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:src="@drawable/ic_close_grey600_24dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:visibility="gone"&ndash;&gt;-->
+        <!--&lt;!&ndash;                tools:visibility="visible" />&ndash;&gt;-->
+        <!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/query_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/query_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="2"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:textSize="16sp"
+                tools:text="Select * " />
+
+            <ImageView
+                android:id="@+id/ic_query_clear"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".1"
+                android:src="@drawable/ic_close_grey600_24dp" />
+        </LinearLayout>
+
+
+        <!-- table VIEW -->
+        <HorizontalScrollView
+            android:id="@+id/sqlite_manager_table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.example.sqlitemanager.ColumnNameView
+                    android:id="@+id/sqlite_manager_table_layout_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sqlite_manager_table_layout_recycler_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingBottom="92dp"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</FrameLayout>

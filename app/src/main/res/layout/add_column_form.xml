@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="16dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        style="@style/largeTile2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:paddingTop="20dp"
+        android:text="Add new column for table: default" />
+
+    <EditText
+        android:id="@+id/col_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Column name" />
+
+    <TextView
+        style="@style/titleaaa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Data tpye" />
+
+    <RadioGroup
+
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/data_int"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="INTEGER"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/data_real"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="REAL"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/data_bool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="BOOLEAN"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="TEXT"
+            android:textSize="10sp" />
+    </RadioGroup>
+    <!--    <LinearLayout-->
+    <!--        android:layout_marginVertical="20dp"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="end"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <com.google.android.material.button.MaterialButton-->
+    <!--            android:id="@+id/btn_cancel"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:backgroundTint="@android:color/darker_gray"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginRight="8dp"-->
+    <!--            android:text="Cancel" />-->
+
+    <!--        <com.google.android.material.button.MaterialButton-->
+    <!--            android:id="@+id/btn_create"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:backgroundTint="@color/colorAccent"-->
+    <!--            android:text="Create" />-->
+    <!--    </LinearLayout>-->
+
+</LinearLayout>
